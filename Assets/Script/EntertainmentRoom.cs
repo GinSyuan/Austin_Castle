@@ -1,24 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class EntertainmentRoom : RoomBase
     {
-        public EntertainmentRoom() : base("Entertainment Room") { }
-
-        public override void OnRoomEntered(List<string> inventory)     // If the player enters the entertainment room
-        {
-            base.OnRoomEntered(inventory);
-            if (!inventory.Contains("Dice"))                           // If the player hasn't collected the dice yet, they find it here
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("   You found a dice.\n");
-                Console.ResetColor();
-                inventory.Add("Dice");
-            }
-            else                                                       // If player already has the dice, there's nothing else here
-            {
-                Console.WriteLine("   There’s nothing more of use here.\n");
-            }
-        }
+    public override void SetRoomLocation(Vector2 coordinates)
+    {
+        base.SetRoomLocation(coordinates);
     }
+
+    public override void OnRoomEntered()
+    {
+        Debug.Log("Treasure Room Entered");
+    }
+
+    public override void OnRoomSearched()
+    {
+        Debug.Log("Treasure Room Searched. Rolling Loot!");
+    }
+
+    public override void OnRoomExited()
+    {
+        Debug.Log("Treasure Room Exited");
+    }
+}
 

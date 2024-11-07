@@ -1,22 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class Cellar : RoomBase
     {
-        public Cellar() : base("Cellar") { }
-
-        public override void OnRoomEntered(List<string> inventory)    // When the player enters the cellar
-        {
-            base.OnRoomEntered(inventory);
-            Console.ForegroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("\nYou have found a treasure! Congratulations!\n");
-            Console.ResetColor();
-
-            
-            Console.ForegroundColor = ConsoleColor.DarkCyan;
-            Console.WriteLine("You have reached the end of your adventure.\nThank you for playing!");     // End the game
-            Console.ResetColor();
-            Environment.Exit(0); // Exit the application
-        }
+    public override void SetRoomLocation(Vector2 coordinates)
+    {
+        base.SetRoomLocation(coordinates);
     }
+
+    public override void OnRoomEntered()
+    {
+        Debug.Log("Treasure Room Entered");
+    }
+
+    public override void OnRoomSearched()
+    {
+        Debug.Log("Treasure Room Searched. Rolling Loot!");
+    }
+
+    public override void OnRoomExited()
+    {
+        Debug.Log("Treasure Room Exited");
+    }
+}
 

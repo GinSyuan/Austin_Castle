@@ -1,0 +1,57 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1910320516643978580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7458137844736089497}
+  - component: {fileID: 6195155508416812074}
+  m_Layer: 0
+  m_Name: Map
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7458137844736089497
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910320516643978580}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6195155508416812074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910320516643978580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bb63e27a6bfa044d8533efa404b6149, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RoomPrefabs:
+  - {fileID: 7993002320209982986, guid: d1f3e7c4234a45f4c822f6fa5d6e73e7, type: 3}
+  - {fileID: 8038728506002976176, guid: 81df98795b15ce340b97f4ed1dfe19d3, type: 3}
+  - {fileID: 7241806532023132509, guid: 870302a9ae32774489e9ae9bd3e4146d, type: 3}
+  - {fileID: 8077669365824330174, guid: 50adb18338dfc374e88d8df0b6f176dd, type: 3}
+  - {fileID: 9029295849288621320, guid: 9801d7ed12b982b4782a862e7f70ee80, type: 3}
+  - {fileID: 7903335718436102711, guid: 1d9e8d875e6150e40bbc3a771f1266d5, type: 3}
+  - {fileID: 2984358132975036077, guid: d3f66e3ab1b8d804e839da22c8e15f68, type: 3}
+  - {fileID: 8200115984675192654, guid: 108d54773893d9c46acc2ef80028bcf5, type: 3}
+  - {fileID: 2132460506447419205, guid: 8f4d0e9e49dff484b9030de01f820d91, type: 3}
+  RoomSize: 4.5

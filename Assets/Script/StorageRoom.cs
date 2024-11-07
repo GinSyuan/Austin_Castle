@@ -1,26 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 
 public class StorageRoom : RoomBase
     {
-        public StorageRoom() : base("Storage Room") { }
-
-        public override void OnRoomEntered(List<string> inventory)      // When the player enters the storage room
-        {
-            base.OnRoomEntered(inventory);
-            if (!inventory.Contains("Ax"))                              // If the player hasn't collected the ax yet, they find it here
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("   You found an ax.\n");
-                Console.ResetColor();
-                inventory.Add("Ax");
-            }
-            else                                                        // If player alredy has the ax, there is nothing eles here
-            {
-                Console.ForegroundColor = ConsoleColor.Blue;
-                Console.WriteLine("   There’s nothing more of use here.\n");
-                Console.ResetColor();
-            }
-        }
+    public override void SetRoomLocation(Vector2 coordinates)
+    {
+        base.SetRoomLocation(coordinates);
     }
+
+    public override void OnRoomEntered()
+    {
+        Debug.Log("Treasure Room Entered");
+    }
+
+    public override void OnRoomSearched()
+    {
+        Debug.Log("Treasure Room Searched. Rolling Loot!");
+    }
+
+    public override void OnRoomExited()
+    {
+        Debug.Log("Treasure Room Exited");
+    }
+}
 

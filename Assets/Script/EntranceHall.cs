@@ -1,16 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using UnityEngine;
 // Derived classes for specific rooms
 public class EntranceHall : RoomBase
     {
-        public EntranceHall() : base("Entrance Hall") { }
-
-        public override void OnRoomEntered(List<string> inventory)
-        {
-            base.OnRoomEntered(inventory);
-            Console.ForegroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("   It's the grand entrance to the castle.\n");
-            Console.ResetColor();
-        }
+    public override void SetRoomLocation(Vector2 coordinates)
+    {
+        base.SetRoomLocation(coordinates);
     }
+
+    public override void OnRoomEntered()
+    {
+        Debug.Log("Treasure Room Entered");
+    }
+
+    public override void OnRoomSearched()
+    {
+        Debug.Log("Treasure Room Searched. Rolling Loot!");
+    }
+
+    public override void OnRoomExited()
+    {
+        Debug.Log("Treasure Room Exited");
+    }
+}
 
