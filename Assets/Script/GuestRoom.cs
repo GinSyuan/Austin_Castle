@@ -12,17 +12,17 @@ public class GuestRoom : RoomBase
 
     public override void OnRoomEntered()
     {
-        Debug.Log("Treasure Room Entered");
+        Debug.Log("Guest Room Entered");
     }
 
     public override void OnRoomSearched()
     {
-        Debug.Log("Treasure Room Searched. Rolling Loot!");
+        Debug.Log("Guest Room Searched");
     }
 
     public override void OnRoomExited()
     {
-        Debug.Log("Treasure Room Exited");
+        Debug.Log("Guest Room Exited");
     }
 }
 

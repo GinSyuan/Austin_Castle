@@ -11,17 +11,17 @@ public class ArtRoom : RoomBase
 
     public override void OnRoomEntered()
     {
-        Debug.Log("Treasure Room Entered");
+        Debug.Log("Art Room Entered");
     }
 
     public override void OnRoomSearched()
     {
-        Debug.Log("Treasure Room Searched. Rolling Loot!");
+        Debug.Log("Art Room Searched.");
     }
 
     public override void OnRoomExited()
     {
-        Debug.Log("Treasure Room Exited");
+        Debug.Log("Art Room Exited");
     }
 }
 
