@@ -11,17 +11,17 @@ public class SmallBackyard : RoomBase
 
     public override void OnRoomEntered()
     {
-        Debug.Log("SmallBackyard Entered");
+        Debug.Log("Treasure Room Entered");
     }
 
     public override void OnRoomSearched()
     {
-        Debug.Log("SmallBackyard Searched.");
+        Debug.Log("Treasure Room Searched. Rolling Loot!");
     }
 
     public override void OnRoomExited()
     {
-        Debug.Log("SmallBackyard Exited");
+        Debug.Log("Treasure Room Exited");
     }
 }
 

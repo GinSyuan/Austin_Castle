@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 // Derived classes for specific rooms
 public class EntranceHall : RoomBase
-{
-    
+    {
     public override void SetRoomLocation(Vector2 coordinates)
     {
         base.SetRoomLocation(coordinates);
@@ -12,17 +11,17 @@ public class EntranceHall : RoomBase
 
     public override void OnRoomEntered()
     {
-        Debug.Log("Entrance Hall Entered");
+        Debug.Log("Treasure Room Entered");
     }
 
     public override void OnRoomSearched()
     {
-        Debug.Log("Entrance Hall Searched.");
+        Debug.Log("Treasure Room Searched. Rolling Loot!");
     }
 
     public override void OnRoomExited()
     {
-        Debug.Log("Entrance Hall Exited");
+        Debug.Log("Treasure Room Exited");
     }
 }
 

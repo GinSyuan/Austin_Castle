@@ -25,22 +25,15 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider otherObject)
     {
-        // Safely get the RoomBase component
-        RoomBase room = otherObject.GetComponent<RoomBase>();
-        if (room != null) // Check if the component exists
-        {
-            _currentRoom = room;
-            _currentRoom.OnRoomEntered();
-        }
+        // When the player enters a new room, update the current room reference
+        _currentRoom = otherObject.GetComponent<RoomBase>();
+        _currentRoom.OnRoomEntered();
     }
 
     private void OnTriggerExit(Collider otherObject)
     {
-        // Safely get the RoomBase component
-        RoomBase room = otherObject.GetComponent<RoomBase>();
-        if (room != null) // Check if the component exists
-        {
-            room.OnRoomExited();
-        }
+        // When the player exits a room, trigger the room exit behavior
+        RoomBase exitingRoom = otherObject.GetComponent<RoomBase>();
+        exitingRoom.OnRoomExited();
     }
 }

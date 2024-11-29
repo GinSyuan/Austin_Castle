@@ -20,11 +20,8 @@ public class PlayerMouseAndPhysics : MonoBehaviour
 
         // Initialize the Rigidbody and lock the cursor to the screen
         physicsBody = GetComponent<Rigidbody>();
-        
-
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
 
         // Stop the Rigidbody from rotating due to physics
         physicsBody.freezeRotation = true;

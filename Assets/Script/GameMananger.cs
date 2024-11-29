@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         // Intro
         Debug.Log("GameManager SpawnPlayer Begins");
         // Pick a random starting room - this must be done only after the map is created
-        var randomStartingRoom = _gameMap.Rooms.ElementAt(0);
+        var randomStartingRoom = _gameMap.Rooms.ElementAt(UnityEngine.Random.Range(0, _gameMap.Rooms.Keys.Count));
         // Create the player
         _playerController = Instantiate(PlayerPrefab, transform);
         // Set their initial position

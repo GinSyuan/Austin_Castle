@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponRoom : RoomBase
-{
-    [SerializeField] private Item roomItem;
-    [SerializeField] private GameObject armorFoundText;
+    {
     public override void SetRoomLocation(Vector2 coordinates)
     {
         base.SetRoomLocation(coordinates);
@@ -13,22 +11,17 @@ public class WeaponRoom : RoomBase
 
     public override void OnRoomEntered()
     {
-        Debug.Log("Weapon Room Entered");
+        Debug.Log("Treasure Room Entered");
     }
 
     public override void OnRoomSearched()
     {
-        Debug.Log("Armor found!");
-        roomItem.gameObject.SetActive(false);
-        FindObjectOfType<InventoryManager>().AddItem(roomItem);
-
-        FindObjectOfType<UIManager>().ShowArmorFoundText(2.0f);
-
+        Debug.Log("Treasure Room Searched. Rolling Loot!");
     }
 
     public override void OnRoomExited()
     {
-        Debug.Log("Weapon Room Exited");
+        Debug.Log("Treasure Room Exited");
     }
 }
 
