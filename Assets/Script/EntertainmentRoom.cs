@@ -11,17 +11,17 @@ public class EntertainmentRoom : RoomBase
 
     public override void OnRoomEntered()
     {
-        Debug.Log("Treasure Room Entered");
+        Debug.Log("Entertainment Room Entered");
     }
 
     public override void OnRoomSearched()
     {
-        Debug.Log("Treasure Room Searched. Rolling Loot!");
+        Debug.Log("Entertainment Room Searched.");
     }
 
     public override void OnRoomExited()
     {
-        Debug.Log("Treasure Room Exited");
+        Debug.Log("Entertainment Room Exited");
     }
 }
 
